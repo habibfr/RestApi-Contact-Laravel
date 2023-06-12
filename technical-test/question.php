@@ -18,3 +18,18 @@ function mergeArray($arr1, $arr2)
 
     return $result;
 }
+
+// b. Write a function that combines two lists by alternatingly taking elements, 
+// e.g. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+function combinesArray($arr1, $arr2)
+{
+    $result = array();
+
+    for ($i = 0; $i < count($arr1); $i++) {
+        array_push($result, $arr1[$i]);
+        array_push($result, $arr2[$i]);
+    }
+
+    return $result;
+}
+

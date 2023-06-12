@@ -12,3 +12,13 @@ foreach ($hasils as $hasil) {
   echo $hasil . ", ";
 }
 echo "]";
+
+// 2. 
+echo "<br>";
+echo "Combine Array: ";
+echo "[";
+$hasils = combinesArray($array1, $array2);
+foreach ($hasils as $hasil) {
+  echo $hasil . ", ";
+}
+echo "]";
