@@ -58,16 +58,12 @@ class ContactController extends Controller
     public function update(Request $request, Contact $contact)
     {
         // update contact
-        // $contact->update([
-        //     "firstName" => $request->firstName,
-        //     "lastName" => $request->lastName,
-        //     "numberPhone" => $request->numberPhone,
-        //     "address" => $request->address
-        // ]);
-        $contact->firstName = $request->firstName;
-        $contact->lastName = $request->lastName;
-        $contact->numberPhone = $request->numberPhone;
-        $contact->address = $request->address;
+        $contact->update([
+            "firstName" => $request->firstName,
+            "lastName" => $request->lastName,
+            "numberPhone" => $request->numberPhone,
+            "address" => $request->address
+        ]);
         $contact->save();
 
         return response()->json([
