@@ -33,3 +33,16 @@ function combinesArray($arr1, $arr2)
     return $result;
 }
 
+
+// c. Write a function to compare is it same value between this string
+// “I like to drink water” and “I Like Too Drink Water”
+// If it's the same value, return true. If not, return false
+function compareString($str1, $str2)
+{
+    if (strtolower($str1) == strtolower($str2)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+

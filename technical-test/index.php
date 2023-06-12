@@ -22,3 +22,16 @@ foreach ($hasils as $hasil) {
   echo $hasil . ", ";
 }
 echo "]";
+
+// 3.
+echo "<br>";
+$str1 = "I like to drink water";
+$str2 = "I Like Too Drink Water";
+$hasil = compareString($str1, $str2);
+echo "Compare String: ";
+
+if ($hasil) {
+  echo "true";
+} else {
+  echo "false";
+}
