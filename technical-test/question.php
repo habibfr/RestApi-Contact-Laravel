@@ -46,3 +46,29 @@ function compareString($str1, $str2)
     }
 }
 
+
+// d. Write a function to take out or separate the “Sushi” word on this string, Input :
+//      i. “One of the recommended food from japan is Sushi”
+//      ii. “Indonesian doesn’t eat Sushi”
+// Output: “Sushi”
+function takeOut($str1, $str2)
+{
+    $arr1  = array();
+    $arr2 = array();
+
+    if (count($arr1) > count($arr2)) {
+        $arr1 = explode(" ", $str1);
+        $arr2 = explode(" ", $str2);
+    } else {
+        $arr1 = explode(" ", $str2);
+        $arr2 = explode(" ", $str1);
+    }
+
+    for ($i = 0; $i < count($arr1); $i++) {
+        for ($j = 0; $j < count($arr2); $j++) {
+            if ($arr1[$i] === $arr2[$j]) {
+                return $arr1[$i];
+            }
+        }
+    }
+}

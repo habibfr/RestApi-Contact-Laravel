@@ -35,3 +35,15 @@ if ($hasil) {
 } else {
   echo "false";
 }
+
+// 4.
+echo "<br>";
+$str1 = "One of the recommended food from japan is Sushi";
+$str2 = "Indonesian doesn’t eat Sushi";
+
+echo "Take out string: ";
+$hasil = takeOut($str1, $str2);
+echo $hasil;
+
+$string1 = "whast, world!";
+$string2 = "hello, World!";
