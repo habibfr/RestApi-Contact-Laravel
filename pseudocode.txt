@@ -1,0 +1,20 @@
+start
+go to the talent growth website
+do you already have an account?
+if you haven't registered yet 
+then filled out the form like fullname, email, password
+if success register, go to login menu
+If you already have, log in by filling in your email and password
+If you have successfully logged in 
+then go to your profile and complete the document
+if the profile is complete then look for a job
+
+open the job search menu
+write the desired job name
+If you have found a suitable job then apply
+then there will be a series of tests
+if all tests are passed 
+then only need to wait for the results
+If you graduate, you will get a new job
+if not look for another job
+end
