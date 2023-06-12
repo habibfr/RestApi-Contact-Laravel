@@ -12,23 +12,32 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        // view all contacts
+        $contacts = Contact::paginate(10);
+        return response()->json([
+            "message" => "success",
+            "data" => $contacts
+        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        //
+        // add new contact
+        $contact = Contact::create([
+            "firstName" => $request->firstName,
+            "lastName" => $request->lastName,
+            "numberPhone" => $request->numberPhone,
+            "address" => $request->address
+        ]);
+
+        return response()->json([
+            "message" => "success",
+            "data" => $contact
+        ]);
     }
 
     /**
@@ -36,15 +45,11 @@ class ContactController extends Controller
      */
     public function show(Contact $contact)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Contact $contact)
-    {
-        //
+        // view contact
+        return response()->json([
+            "message" => "success",
+            "data" => $contact
+        ]);
     }
 
     /**
@@ -52,7 +57,23 @@ class ContactController extends Controller
      */
     public function update(Request $request, Contact $contact)
     {
-        //
+        // update contact
+        // $contact->update([
+        //     "firstName" => $request->firstName,
+        //     "lastName" => $request->lastName,
+        //     "numberPhone" => $request->numberPhone,
+        //     "address" => $request->address
+        // ]);
+        $contact->firstName = $request->firstName;
+        $contact->lastName = $request->lastName;
+        $contact->numberPhone = $request->numberPhone;
+        $contact->address = $request->address;
+        $contact->save();
+
+        return response()->json([
+            "message" => "success",
+            "data" => $contact
+        ]);
     }
 
     /**
@@ -60,6 +81,12 @@ class ContactController extends Controller
      */
     public function destroy(Contact $contact)
     {
-        //
+        // hapus contact
+        $contact->delete();
+
+        return response()->json([
+            "message" => "success",
+            "data" => null
+        ]);
     }
 }
